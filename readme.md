@@ -1,4 +1,4 @@
-# PHP Apache Composer SSL XDebug
+# Docker: PHP Apache Composer SSL XDebug
 
 This repository serves as a foundational project designed to streamline the configuration process for the following components:
 - PHP 8.1
