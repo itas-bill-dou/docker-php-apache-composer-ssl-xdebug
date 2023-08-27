@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Docker Remote Xdebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9003, // The port Xdebug uses in the container
+            "pathMappings": {
+                "/var/www/html": "${workspaceFolder}" // Adjust this path as needed
+            },
+            "log": true,
+            "ignore": ["**/vendor/**/*.php"], // Ignore vendor files for better debugging performance
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bListening on (.*?)[\\n\\r]"
+            },
+            "stopOnEntry": false
+        }
+    ]
+}
