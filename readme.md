@@ -9,9 +9,6 @@ This repository serves as a foundational project designed to streamline the conf
 
 ## Prerequisite Configuration
 To prepare the environment, follow these steps:
-1. Create SSL files (Recommendation tool: **mkcert**) and place them into `docker/ssl`. The cert file name must be `cert.pem` and key file name is `cert-key.pem`
-2. Config local domain name. In *000-default.conf*, it is `demo.test`. You must place it into the **hosts** file in your host machine.
-
 1. Generate SSL files using the recommended tool: **mkcert**. Place the generated files into the `docker/ssl` directory. The certificate file must be named `cert.pem`, and the key file should be named `cert-key.pem`.
 2. Configure the local domain name. In the `000-default.conf` file, the domain is set to `demo.test`. Add the following entry to your host machine's hosts file:
 
