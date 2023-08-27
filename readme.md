@@ -11,16 +11,16 @@ This repository serves as a foundational project designed to streamline the conf
 To prepare the environment, follow these steps:
 1. Generate SSL files using the recommended tool: **mkcert**. Place the generated files into the `docker/ssl` directory. The certificate file must be named `cert.pem`, and the key file should be named `cert-key.pem`.
 2. Configure the local domain name. In the `000-default.conf` file, the domain is set to `demo.test`. Add the following entry to your host machine's hosts file:
-
-```
-127.0.0.1 demo.test
-```
+  ```
+  127.0.0.1 demo.test
+  ```
 
 ## Build Docker Image
 Execute the following command to build the Docker image:
 ```bash
 docker build -t php-apache-composer-ssl-xdebug -f docker/Dockerfile --build-arg DEMO_USERNAME=xxx --build-arg DEMO_PASSWORD=xxx .
 ```
+Note that `--build-arg DEMO_USERNAME=xxx --build-arg DEMO_PASSWORD=xxx` is optional.
 
 # Launch Docker Container
 Run the following command to create and start the Docker container:
