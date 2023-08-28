@@ -1,5 +1,9 @@
+# PHP Version Support - https://xdebug.org/docs/compat#versions
+# Be careful the compatibility issue between Xdebug version and PHP version
+
+ARG PHP_VERSION=8.1
 # Use the official PHP image as the base image
-FROM php:8.1-apache
+FROM php:${PHP_VERSION}-apache
 
 # Define build arguments for credentials
 ARG DEMO_USERNAME
@@ -22,8 +26,12 @@ RUN a2enmod headers ssl rewrite \
 # Install Composer globally
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install Xdebug
+# Without a specified version, it will install the latest version - https://xdebug.org/download/historical
+# PHP8
 RUN pecl install xdebug && docker-php-ext-enable xdebug
+
+# PHP7
+# RUN pecl install xdebug-3.1.6 && docker-php-ext-enable xdebug
 
 # Configure Xdebug
 COPY docker/xdebug.ini /usr/local/etc/php/conf.d/
