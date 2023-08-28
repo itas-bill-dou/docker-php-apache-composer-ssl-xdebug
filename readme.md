@@ -10,10 +10,11 @@ This repository serves as a foundational project designed to streamline the conf
 ## Prerequisite Configuration
 To prepare the environment, follow these steps:
 1. Generate SSL files using the recommended tool: **mkcert**. Place the generated files into the `docker/ssl` directory. The certificate file must be named `cert.pem`, and the key file should be named `cert-key.pem`.
-2. Configure the local domain name. In the `000-default.conf` file, the domain is set to `demo.test`. Add the following entry to your host machine's hosts file:
+2. Configure the local domain name. The `000-default.conf` file, the domain is set to `demo.test`. Add the following entry to your host machine's hosts file:
   ```
   127.0.0.1 demo.test
   ```
+3. Optional: You may want to change the PHP version in the Dockerfile.
 
 ## Build Docker Image
 Execute the following command to build the Docker image:
