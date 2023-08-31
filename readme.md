@@ -5,7 +5,7 @@ This repository serves as a foundational project designed to streamline the conf
 - Apache web server
 - PHP Composer
 - SSL
-- XDebug 
+- Remote XDebug
 
 ## Prerequisite Configuration
 To prepare the environment, follow these steps:
