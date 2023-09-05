@@ -17,7 +17,7 @@ To prepare the environment, follow these steps:
 3. Optional: You may want to change the PHP version in the Dockerfile.
 
 ## Build Docker Image
-Execute the following command to build the Docker image:
+Execute the following command in the root directory to build the Docker image:
 ```bash
 docker build -t php-apache-composer-ssl-xdebug -f docker/Dockerfile --build-arg DEMO_USERNAME=xxx --build-arg DEMO_PASSWORD=xxx .
 ```
